@@ -14,3 +14,19 @@ const filterEvenNumbers = (numbers: number[]): number[] => {
 
 const reverseString = (inputString: string): string =>
   inputString.split('').reverse().join('');
+
+// /**********************************/ //
+
+//* Problem 3:
+
+//? Define a union type StringOrNumber and create a function checkType that uses type guards to return "String" if the input is a string or "Number" if the input is a number.
+
+type StringOrNumber = string | number;
+
+const checkType = (input: StringOrNumber) => {
+  if (typeof input === 'string') {
+    return 'String';
+  } else if (typeof input === 'number') {
+    return 'Number';
+  }
+};
