@@ -97,7 +97,11 @@ const getIntersection = (
   arrOfNumbers1: number[],
   arrOfNumbers2: number[],
 ): number[] => {
-  return arrOfNumbers1.filter((num) => arrOfNumbers2.includes(num));
+  const newArrOfNumbers = arrOfNumbers1.filter((num) =>
+    arrOfNumbers2.includes(num),
+  );
+  const set = new Set(newArrOfNumbers);
+  return Array.from(set);
 };
 
 console.log(getIntersection([1, 2, 3, 4, 5], [3, 4, 5, 6, 7]));
