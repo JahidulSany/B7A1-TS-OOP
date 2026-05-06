@@ -30,3 +30,11 @@ const checkType = (input: StringOrNumber) => {
     return 'Number';
   }
 };
+
+//* Problem 4:
+
+//? Write a generic function getProperty that takes an object and a key, then returns the value of that key. Use constraints to ensure the key exists on the object.
+
+const getProperty = <T, K extends keyof T>(obj: T, key: K): T[K] => obj[key];
+
+
