@@ -31,10 +31,26 @@ const checkType = (input: StringOrNumber) => {
   }
 };
 
+// /**********************************/ //
+
 //* Problem 4:
 
 //? Write a generic function getProperty that takes an object and a key, then returns the value of that key. Use constraints to ensure the key exists on the object.
 
 const getProperty = <T, K extends keyof T>(obj: T, key: K): T[K] => obj[key];
 
+// /**********************************/ //
 
+//* Problem 5:
+
+//? Define an interface Book with properties title, author, and publishedYear. Create a function toggleReadStatus that accepts a Book object and returns a new object with an added isRead property (boolean), defaulting to true.
+
+interface Book {
+  title: string;
+  author: string;
+  publishedYear: number;
+}
+
+const toggleReadStatus = (obj: Book): object => {
+  return { ...obj, isRead: true };
+};
