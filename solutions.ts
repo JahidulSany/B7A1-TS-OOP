@@ -8,4 +8,9 @@ const filterEvenNumbers = (numbers: number[]): number[] => {
 
 // /**********************************/ //
 
+//* Problem 2:
 
+//?  Write a function reverseString that takes a string as input and returns the reversed version of that string.
+
+const reverseString = (inputString: string): string =>
+  inputString.split('').reverse().join('');
