@@ -86,3 +86,18 @@ class Student extends Person {
     return `Name: ${this.name}, Age: ${this.age}, Grade: ${this.grade}`;
   }
 }
+
+// /**********************************/ //
+
+//* Problem 7:
+
+//? Create a function getIntersection that takes two arrays of numbers and returns a new array containing only the elements that are present in both arrays.
+
+const getIntersection = (
+  arrOfNumbers1: number[],
+  arrOfNumbers2: number[],
+): number[] => {
+  return arrOfNumbers1.filter((num) => arrOfNumbers2.includes(num));
+};
+
+console.log(getIntersection([1, 2, 3, 4, 5], [3, 4, 5, 6, 7]));
